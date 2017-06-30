@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -30,14 +31,25 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TMk-12-APz">
+                                <rect key="frame" x="251" y="161" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="generateNewWords:" destination="BYZ-38-t0r" eventType="touchUpInside" id="JZ0-aa-RHY"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="TMk-12-APz" secondAttribute="trailing" constant="62" id="A9R-g5-OMU"/>
                             <constraint firstItem="aN4-Zg-eMt" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="141" id="AXR-rK-EgU"/>
                             <constraint firstItem="aN4-Zg-eMt" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="UBS-wS-dwS"/>
+                            <constraint firstItem="TMk-12-APz" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="235" id="tf0-vG-byf"/>
+                            <constraint firstItem="TMk-12-APz" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="141" id="zfj-Nw-B8S"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="textFieldButton" destination="TMk-12-APz" id="89L-dU-fTj"/>
                         <outlet property="textOutput" destination="aN4-Zg-eMt" id="bZI-4j-CYQ"/>
                     </connections>
                 </viewController>
