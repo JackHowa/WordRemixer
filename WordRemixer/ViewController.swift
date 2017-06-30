@@ -38,9 +38,7 @@ class ViewController: UIViewController {
             .responseJSON { response in
             let response: Data
             let json = try? JSONSerialization.jsonObject(with: response, options: [])
-            guard let title = json["title"] as? [String: Any] else {
-                    return
-                }
+            let title = json["title"] as Any
             return title
                 
         }
