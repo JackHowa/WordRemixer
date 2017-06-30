@@ -12,6 +12,7 @@
 		09FE4C871F06E09400C44404 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FE4C851F06E09400C44404 /* Main.storyboard */; };
 		09FE4C891F06E09400C44404 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09FE4C881F06E09400C44404 /* Assets.xcassets */; };
 		09FE4C8C1F06E09400C44404 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09FE4C8A1F06E09400C44404 /* LaunchScreen.storyboard */; };
+		8A9F3C1EE8A53D33F8835ED5 /* Pods_WordRemixer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF314992DEF5C81C590CF0E9 /* Pods_WordRemixer.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,9 @@
 		09FE4C881F06E09400C44404 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09FE4C8B1F06E09400C44404 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		09FE4C8D1F06E09400C44404 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF314992DEF5C81C590CF0E9 /* Pods_WordRemixer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_WordRemixer.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E9AD6B3C26383EDC2DB0F3E3 /* Pods-WordRemixer.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordRemixer.release.xcconfig"; path = "Pods/Target Support Files/Pods-WordRemixer/Pods-WordRemixer.release.xcconfig"; sourceTree = "<group>"; };
+		F76C37A684EC741DEE5B8838 /* Pods-WordRemixer.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-WordRemixer.debug.xcconfig"; path = "Pods/Target Support Files/Pods-WordRemixer/Pods-WordRemixer.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8A9F3C1EE8A53D33F8835ED5 /* Pods_WordRemixer.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				09FE4C801F06E09400C44404 /* WordRemixer */,
 				09FE4C7F1F06E09400C44404 /* Products */,
+				A1ECFF402A0C5E75FBF48125 /* Pods */,
+				D818D8090E2F1B9745456266 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = WordRemixer;
 			sourceTree = "<group>";
 		};
+		A1ECFF402A0C5E75FBF48125 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				F76C37A684EC741DEE5B8838 /* Pods-WordRemixer.debug.xcconfig */,
+				E9AD6B3C26383EDC2DB0F3E3 /* Pods-WordRemixer.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D818D8090E2F1B9745456266 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF314992DEF5C81C590CF0E9 /* Pods_WordRemixer.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 09FE4C901F06E09400C44404 /* Build configuration list for PBXNativeTarget "WordRemixer" */;
 			buildPhases = (
+				E024FC943454FEE437AB4420 /* [CP] Check Pods Manifest.lock */,
 				09FE4C7A1F06E09400C44404 /* Sources */,
 				09FE4C7B1F06E09400C44404 /* Frameworks */,
 				09FE4C7C1F06E09400C44404 /* Resources */,
+				2427A2606C344136344FA39E /* [CP] Embed Pods Frameworks */,
+				DD001023144A07D576A947DB /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		2427A2606C344136344FA39E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WordRemixer/Pods-WordRemixer-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DD001023144A07D576A947DB /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-WordRemixer/Pods-WordRemixer-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E024FC943454FEE437AB4420 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		09FE4C7A1F06E09400C44404 /* Sources */ = {
@@ -258,6 +333,7 @@
 		};
 		09FE4C911F06E09400C44404 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F76C37A684EC741DEE5B8838 /* Pods-WordRemixer.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WordRemixer/Info.plist;
@@ -270,6 +346,7 @@
 		};
 		09FE4C921F06E09400C44404 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = E9AD6B3C26383EDC2DB0F3E3 /* Pods-WordRemixer.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = WordRemixer/Info.plist;
