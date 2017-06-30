@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import Alamofire
 
 class ViewController: UIViewController {
+    
+ 
 
     @IBOutlet weak var textOutput: UITextField!
     @IBOutlet weak var textFieldButton: UIButton!
@@ -23,8 +26,22 @@ class ViewController: UIViewController {
     }
     @IBAction func generateNewWords(_ sender: Any) {
         print("clickedButton")
+        print(getString())
     }
-
+    
+    func getString() {
+    
+        let todoEndpoint: String = "https://jsonplaceholder.typicode.com/todos/1"
+        Alamofire.request(todoEndpoint)
+            .responseJSON { response in
+            guard let json = response.result.value as? [String: Any] else {
+                print("Didn't get todo object as JSON from API")
+//                print("Error: \(response.request.error)")
+                return
+            }
+            print(json)
+        }
+    }
 
 }
 
